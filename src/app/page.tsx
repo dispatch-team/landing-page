@@ -148,7 +148,7 @@ export default function Index() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
+              <Button variant="default" size="sm">
                 {tNav("docs")}
               </Button>
             </a>
