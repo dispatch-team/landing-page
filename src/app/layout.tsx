@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./index.css";
+
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { ThemeConfigProvider } from "@/components/ThemeProvider";
+import { IntlProvider } from "@/intl/IntlProvider";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Dispatch - Unified Logistics Platform",
+  description:
+    "Dispatch connects merchants and courier providers in Addis Ababa with a unified logistics platform.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeConfigProvider>
+          <IntlProvider>
+            {children}
+          </IntlProvider>
+        </ThemeConfigProvider>
+        <Toaster />
+        <Sonner />
+      </body>
+    </html>
+  );
+}
