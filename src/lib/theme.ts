@@ -78,7 +78,7 @@ export type ColorSchemeKey = keyof typeof COLOR_SCHEMES;
 export const DEFAULT_COLOR_SCHEME: ColorSchemeKey = "purple";
 
 /** The theme mode applied when no preference is stored. */
-export const DEFAULT_THEME_MODE: ThemeMode = "dark";
+export const DEFAULT_THEME_MODE: ThemeMode = "light";
 
 /** localStorage keys used by ThemeConfigProvider. */
 export const THEME_STORAGE_KEYS = {
